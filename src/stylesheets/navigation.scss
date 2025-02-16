@@ -1,0 +1,26 @@
+//navbar styles
+nav {
+  .navbar-brand {
+    img {
+      height: 60px;
+      margin-right: 5px;
+
+      @include media-breakpoint-down(sm) {
+        height: 45px;
+      }
+    }
+
+    span {
+      font-family: $montserrat;
+      font-size: 18pt;
+    }
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 15px;
+    a {
+      font-family: $montserrat;
+      font-size: 16pt;
+    }
+  }
+}
