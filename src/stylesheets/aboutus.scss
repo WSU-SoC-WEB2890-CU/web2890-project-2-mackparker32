@@ -1,0 +1,71 @@
+.about-us-title,
+.need-help,
+.faq-title {
+  text-align: center;
+}
+
+.about-us-title {
+  font-family: $montserrat;
+  font-size: 34pt;
+  margin-top: 25px;
+  @include media-breakpoint-down(sm) {
+    font-size: 24pt;
+  }
+}
+
+.need-help,
+.faq-title {
+  font-family: $montserrat;
+  font-size: 24pt;
+  @include media-breakpoint-down(sm) {
+    font-size: 16pt;
+  }
+}
+
+.about-us-intro {
+  padding: 0 75px;
+  p {
+    font-family: $poppins;
+    font-size: 14pt;
+    @include media-breakpoint-down(sm) {
+      font-size: 12pt;
+    }
+  }
+}
+
+/* faq styling */
+.accordion-container {
+  .accordion {
+    &-item {
+      background-color: $secondary;
+      border-radius: 3px;
+      button {
+        border: 1px solid $primary;
+        border-radius: 8px;
+        background-color: $info;
+        color: $dark;
+        font-family: $poppins;
+        font-size: 16pt;
+        @include media-breakpoint-down(sm) {
+          font-size: 14pt;
+        }
+        &:hover {
+          color: lighten($dark, 20%);
+        }
+      }
+
+      .accordion-body {
+        background-color: $secondary;
+        border-radius: 3px;
+
+        p {
+          font-family: $poppins;
+          font-size: 14pt;
+          @include media-breakpoint-down(sm) {
+            font-size: 10pt;
+          }
+        }
+      }
+    }
+  }
+}
