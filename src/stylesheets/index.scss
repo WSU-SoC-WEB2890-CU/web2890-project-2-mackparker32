@@ -1,0 +1,353 @@
+/* Hero styles */
+.hero {
+  position: relative;
+  height: 80vh;
+
+  .hero-img {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+  }
+
+  .hero-title {
+    z-index: 2;
+    h1 {
+      color: $light;
+      font-family: $montserrat;
+      font-size: 34pt;
+      margin-bottom: 2rem;
+      @include media-breakpoint-up(lg) {
+        text-align: left;
+      }
+      @include media-breakpoint-down(md) {
+        text-align: center;
+        font-size: 24pt;
+      }
+    }
+  }
+
+  .trip-form {
+    z-index: 3;
+    max-width: 500px;
+
+    form {
+      padding: 10px 15px;
+      background-color: $secondary;
+      border-radius: 15px;
+
+      input {
+        border: none;
+        font-family: "Montserrat", serif;
+        font-size: 11pt;
+        @include media-breakpoint-down(sm) {
+          font-size: 8pt;
+        }
+      }
+    }
+
+    label {
+      width: 100%;
+      text-align: left;
+      font-family: "Montserrat", serif;
+      font-size: 16pt;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 12pt;
+      }
+    }
+
+    .trip-input-group:not(:last-of-type) {
+      padding-bottom: 15px;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: "Montserrat", serif;
+      font-size: 14pt;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 12pt;
+      }
+    }
+  }
+}
+
+/* Three button Section */
+.three-button-section {
+  margin-top: 50px;
+
+  .row {
+    .three-buttons {
+      display: flex;
+      justify-content: center;
+      @include media-breakpoint-down(lg) {
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+      button {
+        width: 225px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: $info;
+        color: $dark;
+        border-radius: 8px;
+        border: 1px solid $dark;
+        font-family: "Montserrat", serif;
+        font-size: 12pt;
+
+        &:hover {
+          background-color: darken($info, 10%);
+        }
+      }
+    }
+  }
+}
+
+/* map section styles */
+.map-section {
+  @include media-breakpoint-down(sm) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .container {
+    height: 200px;
+    background-color: $secondary;
+    border-radius: 10px;
+    @include media-breakpoint-down(sm) {
+      height: 150px;
+    }
+
+    img {
+      height: 200px;
+      width: auto;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      @include media-breakpoint-down(sm) {
+        height: 150px;
+      }
+    }
+
+    .text-container {
+      height: 200px;
+      margin-top: 50px;
+      @include media-breakpoint-down(sm) {
+        height: 150px;
+      }
+
+      h2 {
+        font-family: $montserrat;
+        font-size: 24pt;
+        @include media-breakpoint-down(sm) {
+          font-size: 16pt;
+        }
+      }
+
+      p {
+        font-family: $poppins;
+        font-size: 12pt;
+        @include media-breakpoint-down(sm) {
+          font-size: 8pt;
+        }
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* card section styles */
+.special-deals-section {
+  .container {
+    h2 {
+      font-family: $montserrat;
+      font-size: 24pt;
+    }
+
+    h3 {
+      font-family: $poppins;
+      font-size: 14pt;
+      margin: 12px 0;
+    }
+    .ticket-card {
+      background-color: $info;
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      box-shadow: 0 2px 4px $dark;
+
+      @include media-breakpoint-down(lg) {
+        height: 200px;
+      }
+
+      .route {
+        font-family: $montserrat;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: $poppins;
+        font-size: 24px;
+        font-weight: bold;
+        color: $dark;
+      }
+
+      .btn {
+        font-family: $poppins;
+        border-radius: 8px;
+        font-size: 14pt;
+        background-color: $success;
+        border: none;
+
+        &:hover {
+          background-color: lighten($success, 7%);
+        }
+      }
+    }
+  }
+}
+
+/* carousel/review section */
+.review-section {
+  height: 500px;
+
+  .carousel-container {
+    background-color: $secondary;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  h2 {
+    font-family: $montserrat;
+    font-size: 24pt;
+    @include media-breakpoint-down(sm) {
+      font-size: 18pt;
+    }
+  }
+
+  .carousel-inner {
+    max-width: 600px;
+  }
+
+  .carousel-item {
+    padding: 20px;
+  }
+
+  .review-box {
+    background: $light;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px $dark;
+  }
+
+  .review-text {
+    font-family: $poppins;
+    font-size: 16px;
+    margin-bottom: 15px;
+    @include media-breakpoint-down(sm) {
+      font-size: 10pt;
+    }
+  }
+
+  .reviewer-info {
+    font-family: $poppins;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 8pt;
+    }
+  }
+
+  .stars {
+    color: $star;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  // nav controls of carousel
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: $dark;
+    z-index: 10;
+
+    i {
+      font-size: 32px;
+    }
+  }
+
+  .carousel-control-prev {
+    left: 20px;
+  }
+
+  .carousel-control-next {
+    right: 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+    .carousel-control-prev {
+      left: 10px;
+    }
+
+    .carousel-control-next {
+      right: 10px;
+    }
+  }
+}
