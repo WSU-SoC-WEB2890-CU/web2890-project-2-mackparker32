@@ -1,0 +1,97 @@
+// Contact Page Styling
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+
+  h2 {
+    color: $primary;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+// Contact Form
+.contact-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .form-label {
+    font-weight: bold;
+    color: #000;
+  }
+
+  .form-control {
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  button {
+    background-color: $primary;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      color: $secondary;
+    }
+  }
+}
+
+// Contact Info Box
+.contact-info {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    color: $primary;
+    font-weight: bold;
+  }
+
+  p,
+  ul {
+    color: #000;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 991px) {
+  // md breakpoint
+  .contact-info {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  // sm breakpoint
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .contact-info {
+    padding: 15px;
+  }
+}

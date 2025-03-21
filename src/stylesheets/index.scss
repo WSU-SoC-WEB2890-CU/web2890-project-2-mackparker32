@@ -44,7 +44,7 @@
   .hero-title {
     z-index: 2;
     h1 {
-      color: $light;
+      color: $secondary;
       font-family: $montserrat;
       font-size: 34pt;
       margin-bottom: 2rem;
@@ -110,32 +110,59 @@
 /* Three button Section */
 .three-button-section {
   margin-top: 50px;
+  text-align: center;
 
   .row {
     .three-buttons {
       display: flex;
       justify-content: center;
-      @include media-breakpoint-down(lg) {
-        &:not(:last-of-type) {
-          margin-bottom: 10px;
-        }
-      }
-      button {
-        width: 225px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        background-color: $info;
-        color: $dark;
-        border-radius: 8px;
-        border: 1px solid $dark;
-        font-family: "Montserrat", serif;
-        font-size: 12pt;
+      align-items: center;
+      margin-bottom: 15px;
 
-        &:hover {
-          background-color: darken($info, 10%);
-        }
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
       }
     }
+  }
+
+  // Custom Button Styling
+  .btn-custom {
+    width: 225px;
+    min-height: 60px; // Ensures all buttons have the same height
+    padding: 15px;
+    background-color: lighten($primary, 15%);
+    color: $light;
+    border: 2px solid $success;
+    border-radius: 8px;
+    font-family: $montserrat;
+    font-size: 14pt;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    i {
+      font-size: 1.2em;
+    }
+
+    &:hover {
+      background-color: lighten($primary, 30%);
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  // Fix anchor styling for the "Help" button
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -145,12 +172,22 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
   .container {
     height: 200px;
     background-color: $secondary;
     border-radius: 10px;
+    overflow: hidden; // Ensures no overflow from scaling
+    transition: transform 0.3s ease, filter 0.3s ease;
+
     @include media-breakpoint-down(sm) {
       height: 150px;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      filter: brightness(0.9);
+      cursor: pointer;
     }
 
     img {
@@ -158,6 +195,7 @@
       width: auto;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
 
       @include media-breakpoint-down(sm) {
         height: 150px;
@@ -167,6 +205,7 @@
     .text-container {
       height: 200px;
       margin-top: 50px;
+
       @include media-breakpoint-down(sm) {
         height: 150px;
       }
@@ -174,6 +213,8 @@
       h2 {
         font-family: $montserrat;
         font-size: 24pt;
+        transition: color 0.3s ease;
+
         @include media-breakpoint-down(sm) {
           font-size: 16pt;
         }
@@ -182,12 +223,10 @@
       p {
         font-family: $poppins;
         font-size: 12pt;
+        transition: color 0.3s ease;
+
         @include media-breakpoint-down(sm) {
           font-size: 8pt;
-        }
-        &:hover {
-          color: $primary;
-          text-decoration: underline;
         }
       }
     }

@@ -21,7 +21,7 @@
   </head>
   <body>
     <!-- Navigation Section -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="./images/green_bus_logo.png" alt="brand logo" />
@@ -37,6 +37,9 @@
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link active" href="tripplan.html">Charter a Bus</a></li>
             <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="specialdeals.html">Deals</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -51,7 +54,7 @@
       <div class="quote-box">
         <form>
           <div class="row g-2">
-            <div class="col-md-4">
+            <div class="col-md-12">
               <select class="form-select">
                 <option selected class="form-option">Leaving From</option>
                 <option value="1" class="form-option">New York</option>
@@ -61,11 +64,25 @@
               </select>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-12">
               <input type="date" class="form-control" id="departureDate" />
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-12">
+              <select class="form-select">
+                <option selected class="form-option">Arriving To</option>
+                <option value="1" class="form-option">New York</option>
+                <option value="2" class="form-option">Miami</option>
+                <option value="3" class="form-option">Charlotte</option>
+                <option value="4" class="form-option">Chicago</option>
+              </select>
+            </div>
+
+            <div class="col-md-12">
+              <input type="date" class="form-control" id="arrivalDate" />
+            </div>
+
+            <div class="col-md-12">
               <button type="submit" class="btn btn-primary quote-button">Request a Quote</button>
             </div>
           </div>

@@ -15,3 +15,15 @@ const tripDateInput = document.getElementById("departureDate")
 if (tripDateInput) {
   tripDateInput.value = formattedDate
 }
+
+//arrival
+const oneMinute = new Date()
+oneMinute.setDate(oneMinute.getDate() + 1)
+
+const formattedOneMinute = oneMinute.toISOString().split("T")[0]
+
+const arrival = document.getElementById("arrivalDate")
+
+if (arrival) {
+  arrival.value = formattedOneMinute
+}
