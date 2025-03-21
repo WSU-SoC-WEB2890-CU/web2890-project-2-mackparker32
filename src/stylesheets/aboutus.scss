@@ -1,0 +1,58 @@
+.about-us-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: $info;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  p {
+    font-family: $poppins;
+    font-size: 1rem;
+    color: $success;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: darken($success, 10%);
+    }
+  }
+
+  h2 {
+    font-family: $montserrat;
+    font-size: 1.8rem;
+    color: $primary;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    border-bottom: 3px solid $secondary;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:hover {
+      color: lighten($primary, 10%);
+      border-color: lighten($secondary, 10%);
+    }
+  }
+
+  strong {
+    color: $primary;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: lighten($primary, 10%);
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}

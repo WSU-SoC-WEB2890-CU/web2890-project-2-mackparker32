@@ -1,28 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>iLikeBus</title>
+    <link rel="icon" type="image/png" href="./images/green_bus_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="TODO: Project 2 ..." />
 
-<head>
-  <meta charset="utf-8">
-  <title>WEB 2890 - Project 2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="TODO: Project 2 ...">
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="./images/green_bus_logo.png" alt="brand logo" />
+          <span>iLikeBus</span>
+        </a>
 
-<body>
-  <!-- Your HTML goes here -->
-  <h1 class="display-2 text-center my-5 py-5">
-    <span class="d-block py-5 mt-5">
-      <i class="bi bi-filetype-html text-primary"></i> / 
-      <i class="bi bi-filetype-css text-danger"></i> / 
-      <i class="bi bi-filetype-js text-success"></i>
-    </span>
-    
-    Project 2: A multiple-page project of your choosing.
-  </h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <script type="module" src="./javascripts/main.js"></script>
-</body>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="tripplan.html">Charter a Bus</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="specialdeals.html">Deals</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with form -->
+    <section class="hero">
+      <div class="hero-img">
+        <img src="./images/bus_hero_img.jpg" alt="bus in the rain" />
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="hero-title col-lg-6">
+            <h1>Best prices!<br />Guaranteed Seats!</h1>
+          </div>
+
+          <div class="trip-form col-lg-6">
+            <form class="p-4 shadow">
+              <div class="trip-input-group">
+                <label for="from-location">From</label>
+                <input type="text" id="from-location" class="form-control rounded-pill" placeholder="New York, NY" />
+              </div>
+              <div class="trip-input-group">
+                <label for="to-location">To</label>
+                <input type="text" id="to-location" class="form-control rounded-pill" placeholder="Miami, FL" />
+              </div>
+              <div class="trip-input-group">
+                <label for="departure">Departure</label>
+                <input type="date" id="departure" class="form-control rounded-pill" />
+              </div>
+              <div class="trip-input-group">
+                <label for="passengers">Passengers</label>
+                <input type="number" id="passengers" class="form-control rounded-pill" placeholder="0" />
+              </div>
+              <button type="submit" class="general-btn">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Button Section - uses columns/rows -->
+    <section class="three-button-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 three-buttons">
+            <a href="specialdeals.html"
+              ><button class="btn-custom">Offers <i class="bi bi-currency-dollar"></i></button
+            ></a>
+          </div>
+
+          <div class="col-lg-4 col-sm-12 three-buttons">
+            <a href="contact.html"
+              ><button class="btn-custom">Contact Us <i class="bi bi-chat-dots-fill"></i></button
+            ></a>
+          </div>
+
+          <div class="col-lg-4 col-sm-12 three-buttons">
+            <a href="aboutus.html">
+              <button class="btn-custom">Help <i class="bi bi-info-circle-fill"></i></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- grey line to split section -->
+    <section class="section-splitter"></section>
+
+    <!-- map section -->
+    <section class="map-section">
+      <div class="container align-items-center">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-6 p-0">
+            <img src="./images/realistic_map.jpg" alt="Map with markers" class="img-fluid map-image" />
+          </div>
+
+          <div class="col-lg-9 col-md-8 col-6 text-container">
+            <h2>Search Our Map</h2>
+            <p>Choose over 1,000 with iLikeBus <i class="bi bi-arrow-right"></i></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-splitter"></section>
+
+    <!-- Reviews section -->
+    <section class="review-section">
+      <div class="container">
+        <h2 class="text-center mt-5">Hear from Our Customers</h2>
+
+        <div class="carousel-container mt-4">
+          <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="review-box">
+                  <p class="review-text">
+                    “I have been an iLIKEBUS customer for a very long time because of the great service. Schedules are
+                    always on time, and I've never had a breakdown. Long live iLIKEBUS! Thanks.”
+                  </p>
+                  <p class="reviewer-info">From: "Hawash" | Date: Dec 13, 2015</p>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="review-box">
+                  <p class="review-text">
+                    “Your bus schedule is 99% on time and if not sooner. The drivers are always courteous. The buses are
+                    clean and the bus pricing is good. I will continue to use your services as long as I am traveling on
+                    buses. Thank you and have a Happy Holidays!”
+                  </p>
+                  <p class="reviewer-info">From: "Linda Rodriguez" | Date: Dec 9, 2015</p>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="review-box">
+                  <p class="review-text">
+                    “It's my pleasure doing business with the iLIKEBUS Team. I love traveling with your Team because
+                    they are always welcoming and have great customer service. You will always have my support. Once
+                    again, thank youand I'm looking forward to continue traveling with you.”
+                  </p>
+                  <p class="reviewer-info">From: "Clayton" | Date: Oct 14, 2015</p>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="review-box">
+                  <p class="review-text">
+                    “I always buy your bus tickets for my uncles that work in Rockville, MD. My family is from NYC but
+                    some of my uncles work in the Rockville area. They like the on time schedule. The only improvement
+                    my uncles wish for the bus serivice is to have a later bus than 7 am departure.”
+                  </p>
+                  <p class="reviewer-info">From: "Chris P." | Date: Dec 14, 2015</p>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <p>Ticket Search</p>
+            <ul>
+              <li>Blog</li>
+              <li>About Us</li>
+              <li>Q&A</li>
+              <li>Chinatown Bus</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <p>Connect with us</p>
+            <ul>
+              <li>
+                <i class="bi bi-google"></i> <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter-x"></i>
+              </li>
+              <li>917-2980-298</li>
+              <li>help@iLikeBus.com</li>
+              <li>1750 Tysons Boulevard</li>
+              <li>Suite 1500</li>
+              <li>McLean, VA 22102</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <p>Partners</p>
+            <ul>
+              <li>Eastern Bus</li>
+              <li>Jaguar Bus Tour</li>
+              <li>PandaNYBus</li>
+              <li>Star Line</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center mt-4 copyright">iLikeBus &copy; All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- end of my project -->
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>

@@ -1,3 +1,17 @@
-/* Your styles go here */
+/* Overridden styles */
+//variables
+@import "variables.scss";
+
+/* bootstrap and icon import */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* After Import styles */
+@import "global.scss";
+@import "index.scss";
+@import "navigation.scss";
+@import "footer.scss";
+@import "tripplan.scss";
+@import "aboutus.scss";
+@import "faq.scss";
+@import "contact.scss";
